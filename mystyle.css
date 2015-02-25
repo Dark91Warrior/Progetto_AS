@@ -1,0 +1,123 @@
+body
+{
+    background-image: url('Nunnale.jpg');
+	background-color: rgba(255, 255, 255, 0.5);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font: 14px "Open Sans", Arial, sans-serif;
+	color: black;
+	border: 0px;
+	margin: 0 0 0 0;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+h1
+{
+	margin: 0 0 0 0;
+}
+
+#header, footer
+{
+	background-image: url('blue.png');
+	background-repeat: repeat-x;
+	color: #e4e4e4;
+	padding-left: 10px;
+	font-weight: bold;
+	display: block;
+}
+
+#header
+{
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	border-bottom: 2px solid;
+	border-bottom-color: #133783;
+}
+
+footer
+{
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	font: 24px "Open Sans", Arial, sans-serif;
+	margin: auto;
+}
+
+h2
+{
+	color: #e4e4e4;
+	padding-left: 10px;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	background-image: url('blue.png');
+	background-repeat: repeat-x;
+	font-weight: bold;
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	display: block;
+}
+
+a:link, a:visited
+{
+	text-decoration: none;
+	color: #0470D5;
+	font-weight: bold;
+}
+
+a:hover
+{
+	color: #E6E600;
+	font-weight: bold;
+}
+
+#sidebar1
+{
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	position: fixed;
+	width: 140px;
+	left:0px;
+	top:100px;
+	float: left;
+	display: block;
+}
+
+#content
+{
+	padding-top: 0px;
+	padding-left: 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+    border: 2px solid #0470D5;
+	margin: 5px 0 0 138px;
+}
+
+label
+{
+	display: inline-block;
+	width: 39%;
+}
+
+.corrente
+{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+    border: 2px solid #0470D5;
+    border-right-color: rgba(255, 255, 255, 0.5);
+    border-bottom-left-radius: 10px; 
+    border-top-left-radius: 10px;
+}
+
+table, th, td
+{
+	border: 2px solid #0470D5;
+	border-collapse: collapse;
+}
