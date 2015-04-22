@@ -8,7 +8,7 @@
 	{
 		if (!Login())
 		{
-			header("Location: AreaPersonale.php");
+			header("Location: PagLogin.php");
 			exit;
 		}
 	}

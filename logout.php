@@ -16,6 +16,6 @@
 	session_destroy();
 	
 	// Reindirizzamento alla pagina dell'area personale.
-	header("Location: AreaPersonale.php");
+	header("Location: PagLogin.php");
 	exit;
 ?>

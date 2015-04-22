@@ -1,5 +1,12 @@
 <!DOCTYPE html>
+<?php
+	require_once('sessioni.php');
+	require_once('testlogin.php');
+	// Includiamo le funzioni utili per utilizzare il database del sito
+	include("openconn.php");
+?>
 <html>
+	<script type="text/javascript" src="jquery/jquery.min.js"></script>
 	<?php
 		require("view/header.php");
 	?>
@@ -15,9 +22,27 @@
 				<br/>
 				<a href="ProdottiTipici.php"> Prodotti tipici </a>
 				<br/>
-				<a href="AreaPersonale.php"> Area Personale </a>
+				<a style="<?php $visibilita = "visibility:hidden";
+									if (empty($_SESSION['username']))
+									{
+										$visibilita = "visibility:visible";
+									}
+									echo $visibilita;
+							?>" href="PagLogin.php"> Login </a>
 				<br/>
-				<a href="Prova.php"> Prova </a>
+				<a style="<?php $visibilita = "visibility:hidden";
+									if (!empty($_SESSION['username']))
+									{
+										$visibilita = "visibility:visible";
+									}
+									echo $visibilita;
+							?>" href="<?php $tipo = "Utenti.php";
+									if ($_SESSION['COD'] == "VENDITORE")
+									{
+										$tipo = "Venditori.php";
+									}
+									echo $tipo;
+									  ?>"> Area Personale </a>
 			</div>
 			<div id = "content">
 				<h2> Orune </h2>
@@ -34,3 +59,7 @@
 			require("view/footer.php");
 		?>
 </html>
+<?php
+	// Ciudiamo il database quando viene chiusa la pagina, invocando la funzione nella pagina closeconn.php
+	include("closeconn.php");
+?>
