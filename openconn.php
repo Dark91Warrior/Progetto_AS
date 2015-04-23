@@ -14,7 +14,7 @@
 		Settings::$db_password,
 		Settings::$db_name);*/
 		
-	$mysqli = mysql_connect("root", "puggioninuLuca", "criceto896");
+	$mysqli = mysql_connect("spano.sc.unica.it", "puggioninuLuca", "criceto896");
 	if (!$mysqli)
 	{
 		die ("Connessione al database fallita!".mysql_error());
