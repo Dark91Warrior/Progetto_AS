@@ -49,7 +49,7 @@
 					if (isset($_SESSION['username']))
 					{
 						$username = $_SESSION['username'];
-						$queryuser = "SELECT codP, tipoP, nomeP, propr, prezzo, quant FROM user JOIN orunesos.prodotti
+						$queryuser = "SELECT codP, tipoP, nomeP, propr, prezzo, quant FROM user JOIN prodotti
 									  WHERE propr = '{$username}'";
 						$result = mysql_query($queryuser, $mysqli);
 						if (mysql_num_rows($result) > 0)
