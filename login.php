@@ -20,11 +20,11 @@
 		$usernamelog = $_POST['username'];
 		$passlog = ($_POST['password']);
 		
-		$querylog = "SELECT username FROM orunesos.user WHERE username = '{$usernamelog}' AND password = '{$passlog}'";
+		$querylog = "SELECT username FROM user WHERE username = '{$usernamelog}' AND password = '{$passlog}'";
 		
 		$risultato = mysql_query($querylog, $mysqli);
 		
-		$querytipo = "SELECT COD FROM orunesos.user WHERE username = '{$usernamelog}' AND password = '{$passlog}'";
+		$querytipo = "SELECT COD FROM user WHERE username = '{$usernamelog}' AND password = '{$passlog}'";
 		$risultatotipo = mysql_query($querytipo, $mysqli);
 		$tipo = mysql_fetch_array($risultatotipo);
 		$_SESSION['COD'] = $tipo['COD'];

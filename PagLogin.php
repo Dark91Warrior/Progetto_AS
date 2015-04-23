@@ -94,7 +94,7 @@
 					{
 						$('#register').click(function()
 						{
-							$('#content').append('<img src="loader.gif" alt="loader" id="loader"/>');
+							$('#content').append('<img src="immagini/loader.gif" alt="loader" id="loader"/>');
 							
 							var username = $('#username').val();
 							var nome = $('#nome').val();

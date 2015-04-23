@@ -57,7 +57,7 @@
 			
 			/* Creiamo una query per estrapolare tutti gli utenti presenti nel database.
 			   Ci sarà utile per confrontare i dati immessi con quelli esistenti. */
-			$queryuser = "SELECT username, mail from orunesos.user
+			$queryuser = "SELECT username, mail from user
 						  WHERE username = '{$username}' OR mail = '{$mail}'";
 			$result = mysql_query($queryuser, $mysqli);
 			
@@ -69,7 +69,7 @@
 			}
 			else
 			{
-				$queryins = "INSERT INTO orunesos.user VALUES ('$username', '$nome', '$cognome', '$mail', '$password', '$COD')";
+				$queryins = "INSERT INTO user VALUES ('$username', '$nome', '$cognome', '$mail', '$password', '$COD')";
 				$inserisci = mysql_query($queryins, $mysqli);
 				echo "<script type=\"text/javascript\">
 						alert( 'La registrazione è avvenuta con successo! Ti diamo il benvenuto nel nostro portale. Ora potrai usufruire di tutti i servizi.' );

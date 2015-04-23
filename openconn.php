@@ -14,12 +14,12 @@
 		Settings::$db_password,
 		Settings::$db_name);*/
 		
-	$mysqli = mysql_connect("localhost", "Luca", "orune91");
+	$mysqli = mysql_connect("http://spano.sc.unica.it", "puggioninuLuca", "criceto896");
 	if (!$mysqli)
 	{
 		die ("Connessione al database fallita!".mysql_error());
 	}
-	$db = mysql_select_db("orunesos", $mysqli);
+	$db = mysql_select_db("amm14_puggioninuLuca", $mysqli);
 	if (!$db)
 	{
 		die ("Connessione al database fallita!".mysql_error());
