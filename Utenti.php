@@ -7,10 +7,10 @@
 ?>
 <html>
 	<script type="text/javascript" src="jquery/jquery.min.js"></script>
-	<?php
-		require("view/header.php");
-	?>
 		<body>
+		<?php
+			require("view/header.php");
+		?>
 			<div id = "sidebar1">
 				<a href="Home.php"> Home </a>
 				<br/>
@@ -19,8 +19,6 @@
 				<a href="Storia.php"> Storia </a>
 				<br/>
 				<a href="Archeologia.php"> Archeologia </a>
-				<br/>
-				<a href="ProdottiTipici.php"> Prodotti tipici </a>
 				<br/>
 				<a style="<?php $visibilita = "visibility:hidden";
 									if (empty($_SESSION['username']))
@@ -42,12 +40,7 @@
 				<h2>Prova</h2>
 				Ciao <?php echo $_SESSION['username'];?>!<br/>
 				Questa è la pagina degli utenti!
-				<br/><br/>
-				Effettua il logout <br/>
-				<a href="logout.php"><b> Logout </b></a>
-				<?php
-					
-				?>
+				<br/>
 			</div>
 		</body>
 		<?php

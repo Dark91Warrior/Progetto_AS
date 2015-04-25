@@ -7,11 +7,10 @@
 ?>
 <html>
 	<script src="jquery/jquery.min.js" type="text/javascript"></script>
-	<?php
-		// L'header viene incluso in ogni pagina poiché è uguale per tutte
-		require("view/header.php");
-	?>
 		<body>
+		<?php
+			require("view/header.php");
+		?>
 			<div id = "sidebar1">
 				<a href="Home.php"> Home </a>
 				<br/>
@@ -20,8 +19,6 @@
 				<a href="Storia.php"> Storia </a>
 				<br/>
 				<a href="Archeologia.php"> Archeologia </a>
-				<br/>
-				<a href="ProdottiTipici.php"> Prodotti tipici </a>
 				<br/>
 				<a class ="corrente" href="PagLogin.php"> Login </a>
 				<br/>
@@ -76,9 +73,10 @@
 						<label for="password">Password</label>
 						<input type="password" name="password" id="password"/>
 						<br/>
-						<label for="email">Tipo</label>
-						<input type="radio" name="COD" value="UTENTE"> Utente
-						<input type="radio" name="COD" value="VENDITORE"> Venditore <br>
+						<label for="COD">Tipo</label>
+						Utente<input type="radio" name="COD" value="UTENTE">
+						Venditore<input type="radio" name="COD" value="VENDITORE">
+						<br/>
 						<input type="submit" name="register" id="register" value="Registrati"/>
 						<br/>
 				</form>

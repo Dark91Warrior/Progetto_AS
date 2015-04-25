@@ -1,23 +1,21 @@
 body
 {
     background-image: url('immagini/Nunnale.jpg');
-	background-color: rgba(255, 255, 255, 0.5);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	font: 14px "Open Sans", Arial, sans-serif;
 	color: black;
-	border: 0px;
-	margin: 0 0 0 0;
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-top: 0px;
+	margin: auto;
+	width: 1024px;
+	min-height: full;
+	font-size: 12px;
+	font-family: Verdana, sans-serif;
 }
 
 h1
 {
 	margin: 0 0 0 0;
+	min-width: 500px;
 }
 
 #header
@@ -31,6 +29,9 @@ h1
 	border-top-left-radius:10px;
 	border-bottom: 2px solid;
 	border-bottom-color: #133783;
+	width: 1024px;
+	margin: 0 0 0 0;
+	font-family: Verdana, sans-serif;
 }
 
 #footer
@@ -44,9 +45,10 @@ h1
 	border-bottom-left-radius:10px;
 	border-top: 2px solid;
 	border-top-color: #133783;
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
+	font-family: Verdana, sans-serif;
+	width: 1024px;
+	text-align: center;
+	float: bottom;
 }
 
 h2
@@ -61,16 +63,17 @@ h2
 	border-top-left-radius:10px;
 	border-bottom-left-radius:10px;
 	display: block;
+	font-family: Verdana,sans-serif;
 }
 
-a:link, a:visited
+a:link, a:visited, button:link, button:visited, #login:link, #login:visited, #register:hover, #logout:hover, #register:hover, #logout:hover
 {
 	text-decoration: none;
 	color: #0470D5;
 	font-weight: bold;
 }
 
-a:hover
+a:hover, button:hover, #login:hover, #register:hover, #logout:hover
 {
 	color: #E6E600;
 	font-weight: bold;
@@ -78,36 +81,56 @@ a:hover
 
 #sidebar1
 {
-	padding-top: 0px;
+	padding-top: 20px;
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
-	position: fixed;
 	width: 140px;
-	height: 100%;
 	left:0px;
-	top:100px;
 	float: left;
-	display: block;
 }
 
 #content
 {
 	min-height: 180px;
 	padding-top: 0px;
-	padding-left: 5px;
-	border-bottom: 100px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom: 20px;
 	background-color: rgba(255, 255, 255, 0.5);
 	border-top-left-radius:10px;
 	border-bottom-left-radius:10px;
     border: 2px solid #0470D5;
-	margin: 5px 10px 5px 138px;
+	margin: 5px 0px 5px 138px;
+	width: 872px;
+	font-family: Verdana,sans-serif;
+	text-align: justify;
 }
 
 label
 {
 	display: inline-block;
-	width: 39%;
+	line-height: 30px;
+	width: 100px;
+	font-family: Verdana, sans-serif;
+}
+
+input[type='text'], input[type='email'], input[type='password']
+{
+	border: 2px solid #0470D5;
+	height: 20px;
+	width: 180px;
+	color: black;
+	border-bottom-left-radius: 6px; 
+    border-top-left-radius: 6px;
+	border-bottom-right-radius: 6px; 
+    border-top-right-radius: 6px;
+}
+
+input[type='radio']
+{
+	width: 40px;
+	color: black;
 }
 
 .corrente
@@ -128,4 +151,55 @@ table, th, td
 {
 	border: 2px solid #0470D5;
 	border-collapse: collapse;
+}
+
+#login, #register, #logout{
+	background-image: url('immagini/blue.png');
+	background-repeat: repeat-x; /* colore di sfondo    */
+	border: 2px solid #0470D5;   /* bordo dell'elemento */
+	color: #e4e4e4;              /* colore del testo    */
+	font-weight: bold;           /* testo in grassetto  */
+	font-family: Verdana,sans-serif;
+	padding: 0;                  /* padding             */
+	height: 25px;                /* altezza             */
+	width: 80px;                 /* larghezza           */
+	border-bottom-left-radius: 6px; 
+    border-top-left-radius: 6px;
+	border-bottom-right-radius: 6px; 
+    border-top-right-radius: 6px;
+}
+
+button 
+{
+	background-image: url('immagini/blue.png');
+	background-repeat: repeat-x; /* colore di sfondo    */
+	border: 2px solid #0470D5;   /* bordo dell'elemento */
+	color: #e4e4e4;              /* colore del testo    */
+	font-weight: bold;           /* testo in grassetto  */
+	font-family: Verdana,sans-serif;
+	padding: 0;                  /* padding             */
+	height: 25px;                /* altezza             */
+	width: 180px;                /* larghezza           */
+	border-bottom-left-radius: 6px; 
+    border-top-left-radius: 6px;
+	border-bottom-right-radius: 6px; 
+    border-top-right-radius: 6px;
+	position: center;
+}
+
+#userbar
+{
+	float: right;
+	padding-right: 10px;
+	padding-top: 5px;
+	font: 12px "Open Sans", Verdana, sans-serif;
+	font-weight: bold;
+	text-align: right;
+}
+
+.center
+{
+	margin-left: 322px;
+	margin-right: 422px;
+	width: 50%;
 }

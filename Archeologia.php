@@ -7,10 +7,10 @@
 ?>
 <html>
 	<script type="text/javascript" src="jquery/jquery.min.js"></script>
-	<?php
-		require("view/header.php");
-	?>
 		<body>
+		<?php
+			require("view/header.php");
+		?>
 			<div id = "sidebar1">
 				<a href="Home.php"> Home </a>
 				<br/>
@@ -19,8 +19,6 @@
 				<a href="Storia.php"> Storia </a>
 				<br/>
 				<a class ="corrente" href="Archeologia.php"> Archeologia </a>
-				<br/>
-				<a href="ProdottiTipici.php"> Prodotti tipici </a>
 				<br/>
 				<a style="<?php $visibilita = "visibility:hidden";
 									if (empty($_SESSION['username']))

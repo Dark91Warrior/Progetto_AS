@@ -7,15 +7,10 @@
 ?>
 <html>
 	<script type="text/javascript" src="jquery/jquery.min.js"></script>
+	<body>
 	<?php
 		require("view/header.php");
-		$visibilita = "visibility:hidden";
-		if (isset($_SESSION))
-		{
-			$visibilita = "hidden";
-		}
 	?>
-	<body>
 			<div id = "sidebar1">
 				<a class ="corrente" href="Home.php"> Home </a>
 				<br/>
@@ -24,8 +19,6 @@
 				<a href="Storia.php"> Storia </a>
 				<br/>
 				<a href="Archeologia.php"> Archeologia </a>
-				<br/>
-				<a href="ProdottiTipici.php"> Prodotti tipici </a>
 				<br/>
 				<a style="<?php $visibilita = "visibility:hidden";
 									if (empty($_SESSION['username']))
@@ -49,11 +42,40 @@
 									echo $tipo;
 									  ?>"> Area Personale </a>
 			</div>
+			
 			<div id = "content">
 				<h2>Home</h2>
-				
+				<p> Ti diamo il benvenuto nel nostro sito. Puoi accedere a una delle seguenti sezioni: </p>
+				<div class="center">
+					<button onclick="location.href='Orune.php'">Orune</button><br/><br/>
+					<button onclick="location.href='Storia.php'">Storia</button><br/><br/>
+					<button onclick="location.href='Archeologia.php'">Archeologia</button><br/><br/>
+					<button onclick="location.href='ProdottiTipici.php'">Prodotti Tipici</button><br/><br/>
+					<button onclick="<?php $locazione = "location.href='PagLogin.php'";
+										if (!empty($_SESSION['username']))
+										{
+											if ($_SESSION['COD'] == "VENDITORE")
+											{
+												$locazione = "location.href='Venditori.php'";
+											}
+											else
+											{
+												$locazione = "location.href='Utenti.php'";
+											}
+										}
+										echo $locazione;
+									?>">
+					<?php $sezione = "Login";
+									if (!empty($_SESSION['username']))
+									{
+										$sezione = "Area Personale";
+									}
+									echo $sezione;
+					?></button>
+				</div>
 			</div>
 	</body>
+	
 	<?php
 		require("view/footer.php");
 	?>
