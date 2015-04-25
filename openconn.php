@@ -14,7 +14,7 @@
 		Settings::$db_password,
 		Settings::$db_name);*/
 		
-	$mysqli = mysql_connect("localhost", "Luca", "orune91");
+	$mysqli = mysql_connect("localhost", "puggioninuLuca", "criceto896");
 	if (!$mysqli)
 	{
 		die ("Connessione al database fallita!".mysql_error());
