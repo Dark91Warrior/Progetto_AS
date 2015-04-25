@@ -19,7 +19,7 @@
 	{
 		die ("Connessione al database fallita!".mysql_error());
 	}
-	$db = mysql_select_db("orunesos", $mysqli);
+	$db = mysql_select_db("amm14_puggioninuLuca", $mysqli);
 	if (!$db)
 	{
 		die ("Connessione al database fallita!".mysql_error());
